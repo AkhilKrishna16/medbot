@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mongo_dart/mongo_dart.dart' as mongo;
 
+import 'dart:developer';
+
 import './constants.dart';
 
 main() async {
-  final db = mongo.Db(MONGO_URL);
+  final db = await mongo.Db.create(MONGO_URL);
   try {
     await db.open();
 
@@ -12,6 +14,7 @@ main() async {
     await collection.insert({'name': 'Akhil'});
 
     final data = await collection.find().toList();
+    inspect(data);
     print(data);
   } catch (e) {
     print(e);
