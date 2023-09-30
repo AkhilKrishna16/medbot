@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import './pages/intro_screen.dart';
+import './pages/login_screen.dart';
+import './pages/home_page.dart';
+import './pages/register_screen.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 
@@ -25,6 +28,9 @@ class MedBotState extends State<MedBot> {
       initialRoute: 'intro_screen',
       routes: {
         'intro_screen': (context) => const IntroScreen(),
+        'login_screen': (context) => const LoginScreen(),
+        'home_page': (context) => const HomePage(),
+        'register_screen': (context) => const RegisterScreen(),
       },
     );
   }

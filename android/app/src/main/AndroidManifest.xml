@@ -3,6 +3,15 @@
         android:label="medbot"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <queries>
+            <package android:name="com.google.android.apps.healthdata" />
+                <intent>
+                    <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+                </intent>
+        </queries>
+
+        <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
