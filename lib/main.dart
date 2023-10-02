@@ -4,6 +4,10 @@ import './pages/intro_screen.dart';
 import './pages/login_screen.dart';
 import './pages/home_page.dart';
 import './pages/register_screen.dart';
+import './pages/news_generator_screen.dart';
+import './pages/medical_ai_screen.dart';
+import './pages/diagnosis_screen.dart';
+import './pages/settings_screen.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 
@@ -31,6 +35,10 @@ class MedBotState extends State<MedBot> {
         'login_screen': (context) => const LoginScreen(),
         'home_page': (context) => const HomePage(),
         'register_screen': (context) => const RegisterScreen(),
+        'news_generator_screen': (context) => const NewsGeneratorScreen(),
+        'medical_ai_screen': (context) => const MedicalAIScreen(),
+        'diagnosis_screen': (context) => const DiagnosisScreen(),
+        'settings_screen': (context) => const SettingsScreen(),
       },
     );
   }

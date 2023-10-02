@@ -30,9 +30,11 @@ class _LoginScreenState extends State<LoginScreen> {
           prefs.getString('password') != null) {
         _emailController.text = prefs.getString('email') ?? '';
         _passwordController.text = prefs.getString('password') ?? '';
-        setState(() {
-          isLoading = true;
-        });
+        setState(
+          () {
+            isLoading = true;
+          },
+        );
         signIn(prefs.getString('email') ?? '',
                 prefs.getString('password') ?? '')
             .then(
@@ -296,11 +298,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                 .then(
                               (value) {
                                 if (value) {
-                                  Future.delayed(const Duration(seconds: 2),
-                                      () {
-                                    Navigator.pushReplacementNamed(
-                                        context, 'home_page');
-                                  });
+                                  Future.delayed(
+                                    const Duration(seconds: 2),
+                                    () {
+                                      Navigator.pushReplacementNamed(
+                                          context, 'home_page');
+                                    },
+                                  );
                                 } else {
                                   Future.delayed(
                                     const Duration(seconds: 2),

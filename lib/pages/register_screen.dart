@@ -46,6 +46,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           email: email, password: password);
 
       final prefs = await SharedPreferences.getInstance();
+
       prefs.setBool('autoLogin', true);
       prefs.setString('email', email);
       prefs.setString('password', password);

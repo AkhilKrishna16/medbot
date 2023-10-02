@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medbot/pages/login_screen.dart';
 
-import '../fade_page_route.dart';
-
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
 

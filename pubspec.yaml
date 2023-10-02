@@ -45,7 +45,9 @@ dependencies:
   flutter_keyboard_visibility: ^5.4.1
   http: ^1.1.0
   health: ^8.0.0
- 
+  intl: ^0.18.1
+  dart_openai: ^4.0.0
+  url_launcher: ^6.1.14
 
 dev_dependencies:
   flutter_test:
